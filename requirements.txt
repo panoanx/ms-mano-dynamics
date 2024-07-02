@@ -1,0 +1,11 @@
+# ./extern/stable-baselines3/
+stable_baselines3==1.5.1a5
+# too slow using direct git+ssh
+# git+ssh://git@github.com/robotflow-initiative/pyrfuniverse@parallel
+https://github.com/robotflow-initiative/pyrfuniverse/archive/parallel.zip
+icecream
+scipy
+wandb
+tensorboard
+argparse
+confz

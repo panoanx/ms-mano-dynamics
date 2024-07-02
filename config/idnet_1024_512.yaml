@@ -1,0 +1,29 @@
+# chore
+mim_data_path: "../glove/pd/"
+num_agents: 64 # number of agents per unity process
+graphics: false # whether show the gui if executable_file is not null
+
+# unity simulator executable file
+# null or '@editor' => editor
+# file path => pre-built binary
+executable_file: '../unknown-linux/RFUniverse.x86_64'
+
+use_subproc: true # whether use subprocess to run unity simulator
+n_proc: 128
+mt_shape: [90, 3]
+
+# Training settings
+learning_rate: 0.0003
+seed: 100
+
+# Model architecture
+net_arch:
+  policy: [1024, 512]
+  value_function: [512, 256]
+
+# PPO settings
+n_steps: 2
+n_epochs: 4
+total_timesteps: 100000000000
+
+tb_log_name: "idnet_1024_512"
