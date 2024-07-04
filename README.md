@@ -39,12 +39,12 @@ The `mim_data_path` in the configuration file should be set to the path of the e
 Please make sure you have the [MS-MANO Simulator](https://github.com/panoanx/ms-mano-unity) installed.
 
 > [!TIP]
-> You may want first understand how the simulator communicates with the training code. 
+> You may need to first understand how the simulator communicates with the training code. 
 > 
 > In short, at each simulation step, the Unity simulator sends the user-specified features to python via a TCP socket. After the python code (defined as a gym step) processes the features, it sends the actions back to the simulator. 
 > If you want to implement a new function in the simulator and returns new data structures, both the unity-side and python-side code should be updated.
 > 
-> Please refer to the [README](https://docs.robotflow.ai/pyrfuniverse/markdown/introduction.html).
+> Please refer to the [pyrfuniverse docs](https://docs.robotflow.ai/pyrfuniverse/markdown/introduction.html) for more details.
 
 To train the IDNet, navigate to the root directory of this repository and run the following command:
 ```sh
@@ -89,4 +89,6 @@ To load the trained model, you can refer to the official [stable-baselines3 docu
 You can also visualize the loss and reward curves using `tensorboard`. The tensorboard files are located in the `tensorboard` directory. 
 
 You may notice we a high rollout-reward-mean value in the first step. This is due to the initializations of the muscles. We recommend you to ignore the first step when analyzing the results.
+
+
 
